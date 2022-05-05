@@ -7,7 +7,7 @@ const Home = () => {
   const getData = async () => {
     try {
       const res = await fetch(
-        "https://sheet.best/api/sheets/bff990d0-8ada-43e9-97eb-0ad668bb19ec?_format=index"
+        "https://sheet.best/api/sheets/84a3c6f5-bed8-4fb5-aeec-1a2fb70ec3aa?_format=index"
       );
       const data = await res.json();
       setData(Object.keys(data).map((key) => data[key]));
@@ -23,7 +23,7 @@ const Home = () => {
   const handleDelete = async (rowIndex) => {
     try {
       const res = await fetch(
-        `https://sheet.best/api/sheets/bff990d0-8ada-43e9-97eb-0ad668bb19ec/${rowIndex}`,
+        `https://sheet.best/api/sheets/84a3c6f5-bed8-4fb5-aeec-1a2fb70ec3aa/${rowIndex}`,
         {
           method: "DELETE",
         }
@@ -41,6 +41,9 @@ const Home = () => {
       {data?.map((item, i) => (
         <div className="accordion-item" key={i}>
           <h2 className="accordion-header" id={`heading${i}`}>
+            
+          
+            
             <button
               className="accordion-button"
               type="button"
@@ -49,9 +52,30 @@ const Home = () => {
               aria-expanded="true"
               aria-controls={`collapse${i}`}
             >
-              {item.date}
+            
+              <span className="itemID">{item.id}</span>
+              <span className="itemID">{item.surname}</span>
+              <span className="itemID">{item.otherName}</span>
+              <span className="itemID">{item.gender}</span>
+              <span className="itemID">{item.department}</span>
+              <span className="itemID">{item.membershipStatus}</span>
+          
+              
+              
             </button>
           </h2>
+
+          {/* <table>
+            <tr>
+              <td>{item.id}</td>
+              <td>{item.surname}</td>
+              <td>{item.otherName}</td>
+              <td>{item.gender}</td>
+              <td>{item.department}</td>
+              <td>{item.membershipStatus}</td>
+              </tr>
+            </table> */}
+            
           <div
             id={`collapse${i}`}
             className="accordion-collapse collapse"
@@ -60,9 +84,17 @@ const Home = () => {
           >
             <div className="accordion-body">
               <div className="d-flex justify-content-between align-items-center">
+                
+           
+              {item.surname} 
+              {item.otherName}
+              {item.gender}
+              {item.department}
+              {item.membershipStatus}
+
                 <span>
-                  <strong className="display-6">{item.name}</strong> ---{" "}
-                  {item.email}
+                  <strong className="display-6">{item.id}</strong> ---{" "}
+                  {item.surname}
                 </span>
                 <span>
                   <Link to={`/edit/${i}`} style={{ textDecoration: "none" }}>
