@@ -56,7 +56,7 @@ const Edit = () => {
 
   return (
     <form style={{ maxWidth: 500, margin: "auto" }} onSubmit={handleSubmit}>
-      <h1 className="text-muted text-center">View</h1>
+      <h1 className="text-muted text-center">Member Details</h1>
       <div className="mb-3">
         <label htmlFor="surname" className="form-label">
           Full Name
@@ -75,7 +75,7 @@ const Edit = () => {
           Gender
         </label>
         <input
-          type="email"
+          type="text"
           className="form-control"
           name="gender"
           disabled="true"
@@ -83,6 +83,31 @@ const Edit = () => {
           onChange={handleChange}
         />
       </div>
+      <div className="mb-3">
+        <label htmlFor="otherName" className="form-label">
+          Department
+        </label>
+        <input
+          type="text"
+          className="form-control"
+          name="gender"
+          disabled="true"
+          value={data.department}
+          onChange={handleChange}
+        />
+        <label htmlFor="otherName" className="form-label">
+          Membership Status
+        </label>
+        <input
+          type="text"
+          className="form-control"
+          name="gender"
+          disabled="true"
+          value={data.membershipStatus}
+          onChange={handleChange}
+        />
+      </div>
+
       <div className="mb-3">
         <label htmlFor="membershipStatus" className="form-label">
           Address
