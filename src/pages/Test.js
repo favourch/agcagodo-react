@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Table } from 'react-bootstrap';
 
-const Home = () => {
+const Test = () => {
   const [data, setData] = useState();
 
   const getData = async () => {
@@ -21,22 +21,7 @@ const Home = () => {
     getData();
   }, []);
 
-  const handleDelete = async (rowIndex) => {
-    try {
-      const res = await fetch(
-        `https://sheet.best/api/sheets/84a3c6f5-bed8-4fb5-aeec-1a2fb70ec3aa/${rowIndex}`,
-        {
-          method: "DELETE",
-        }
-      );
-      if (res.ok) {
-        const updatedData = data.filter((_, i) => i !== rowIndex);
-        setData(updatedData);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  
   return (
     <Table responsive striped bordered hover>
 
@@ -69,4 +54,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Test;
