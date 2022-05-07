@@ -1,5 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+// es6
+import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Add from "./pages/Add";

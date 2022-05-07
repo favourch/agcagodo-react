@@ -48,9 +48,9 @@ const Test = () => {
       <td> <Link to={`/view/${i}`} style={{ textDecoration: "none" }}>View</Link></td>
     </tr>
   </tbody>
-
       ))}
 </Table>
+
   );
 };
 

@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { ReactToPrint } from "react-to-print";
 
 const Edit = () => {
   const history = useHistory();
@@ -137,9 +138,7 @@ const Edit = () => {
       </div>
 
       <div>
-      <br></br>
           <hr></hr>
-      <br></br>
       </div>
 
       {/* Group for Department and Membership Status */}
@@ -202,11 +201,14 @@ const Edit = () => {
           onChange={handleChange}
         />
       </div>
-      <div className="text-center">
+      {/* <div className="text-center">
         <button className="btn btn-primary">Print</button>
-      </div>
+      </div> */}
     </form>
+
   );
+
+  
 };
 
 export default Edit;
