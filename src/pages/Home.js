@@ -57,6 +57,7 @@ const Home = () => {
               <span className="itemID">{item.surname}</span>
               <span className="itemID">{item.otherName}</span>
               <span className="itemID">{item.gender}</span>
+              <span className="itemID">{item.phoneNumber}</span>
               <span className="itemID">{item.department}</span>
               <span className="itemID">{item.membershipStatus}</span>
           
@@ -89,6 +90,7 @@ const Home = () => {
               {item.surname} 
               {item.otherName}
               {item.gender}
+              {item.phoneNumber}
               {item.department}
               {item.membershipStatus}
 

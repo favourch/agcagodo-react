@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { ReactToPrint } from "react-to-print";
 
 const Edit = () => {
   const history = useHistory();
@@ -57,7 +56,8 @@ const Edit = () => {
   };
 
   return (
-    <form style={{ maxWidth: 700, margin: "auto" }} onSubmit={handleSubmit}>
+    <form style={{ maxWidth: 700, margin: "auto" }}>
+      <img style={{width: "20%", height: "20%", display: "block", margin: "0 auto 0 auto"}} src="https://res.cloudinary.com/dzsp4g9vd/image/upload/v1654339758/agc-agodo/logo/ag-logo.jpg"></img>
       <h1 className="text-muted text-center">Member Details</h1>
       <div className="mb-3">
         <label htmlFor="surname" className="form-label">
@@ -67,9 +67,9 @@ const Edit = () => {
           type="text"
           className="form-control"
           name="name"
-          disabled="true"
+          disabled={true}
           value={data.surname + ' ' + data.otherName}
-          onChange={handleChange}
+          
         />
       </div>
       
@@ -83,9 +83,9 @@ const Edit = () => {
           type="text"
           className="form-control"
           name="gender"
-          disabled="true"
+          disabled={true}
           value={data.gender}
-          onChange={handleChange}
+          
         />
         </div>
         
@@ -97,9 +97,9 @@ const Edit = () => {
           type="text"
           className="form-control"
           name="martialStatus"
-          disabled="true"
+          disabled={true}
           value={data.maritalStatus}
-          onChange={handleChange}
+          
         />
         </div>
       </div>
@@ -116,9 +116,9 @@ const Edit = () => {
           type="text"
           className="form-control"
           name="gender"
-          disabled="true"
+          disabled={true}
           value={data.department}
-          onChange={handleChange}
+          
         />
         </div>
         
@@ -130,9 +130,9 @@ const Edit = () => {
           type="text"
           className="form-control"
           name="gender"
-          disabled="true"
+          disabled={true}
           value={data.membershipStatus}
-          onChange={handleChange}
+          
         />
         </div>
       </div>
@@ -151,9 +151,9 @@ const Edit = () => {
           type="text"
           className="form-control"
           name="state"
-          disabled="true"
+          disabled={true}
           value={data.state}
-          onChange={handleChange}
+          
         />
         </div>
         
@@ -165,9 +165,9 @@ const Edit = () => {
           type="text"
           className="form-control"
           name="lga"
-          disabled="true"
+          disabled={true}
           value={data.lga}
-          onChange={handleChange}
+          
         />
         </div>
 
@@ -179,9 +179,9 @@ const Edit = () => {
           type="text"
           className="form-control"
           name="town"
-          disabled="true"
+          disabled={true}
           value={data.town}
-          onChange={handleChange}
+          
         />
         </div>
       </div>
@@ -193,17 +193,18 @@ const Edit = () => {
         </label>
         <textarea
           name="address"
-          disabled="true"
+          disabled={true}
           cols="30"
           rows="3"
           className="form-control"
           value={data.address}
-          onChange={handleChange}
+          
         />
       </div>
-      {/* <div className="text-center">
-        <button className="btn btn-primary">Print</button>
-      </div> */}
+      <div className="text-center">
+        <button className="col-lg btn btn-primary" style={{}}
+        onClick={window.print} >Print Data</button>
+      </div>
     </form>
 
   );

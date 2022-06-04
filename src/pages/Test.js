@@ -31,6 +31,7 @@ const Test = () => {
       <th>Surname</th>
       <th>Other Name</th>
       <th>Gender</th>
+      <th>Phone Number</th>
       <th>Department</th>
       <th>M. Status</th>
     </tr>
@@ -43,6 +44,7 @@ const Test = () => {
       <td>{item.surname}</td>
       <td>{item.otherName}</td>
       <td>{item.gender}</td>
+      <td>{item.phoneNumber}</td>
       <td>{item.department}</td>
       <td>{item.membershipStatus}</td>
       <td> <Link to={`/view/${i}`} style={{ textDecoration: "none" }}>View</Link></td>
